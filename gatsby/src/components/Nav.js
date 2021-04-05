@@ -36,7 +36,7 @@ export default function Nav() {
     <StyledNav>
       <div>
         <h1>
-          Tait Sengstock
+          Tait Sengstock!
         </h1>
       </div>
       <ul css={css`
