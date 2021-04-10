@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import PalceholderImage from "../assets/images/placeholder-artwork.jpg";
+import PalceholderImage from "../../assets/images/placeholder-artwork.jpg";
 import { css } from 'styled-components';
 
 
 export const Artwork = ({ artworkImage, artworkName, artworkSlug, artworkMedia, artworkMediaId, artworkMediaName }) => {
-    console.log(artworkImage.src)
     return (     
           <Link 
             css={css`

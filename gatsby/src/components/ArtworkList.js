@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import Artwork from './Artwork';
+import Artwork from './artwork/Artwork';
 import Carousel from './Carousel';
 import ListToolbar from './ListToolbar';
 import ListViewContext from './ListViewContext';
