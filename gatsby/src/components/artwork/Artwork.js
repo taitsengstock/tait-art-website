@@ -2,12 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
+import usePlaceholder from "../../utils/usePlaceholder"
 import PalceholderImage from "../../assets/images/placeholder-artwork.jpg";
 import { css } from 'styled-components';
 
 
 export const Artwork = ({ artworkImage, artworkName, artworkSlug, artworkMedia, artworkMediaId, artworkMediaName }) => {
-    return (     
+
+  const placeholder = usePlaceholder()
+  console.log(placeholder)
+
+  return (     
           <Link 
             css={css`
               display: block;
@@ -19,14 +24,7 @@ export const Artwork = ({ artworkImage, artworkName, artworkSlug, artworkMedia, 
               margin: 40px auto;
             `}
             > 
-              { artworkImage.src ? <Img fluid={artworkImage} /> 
-              : <img 
-              css={css`
-                width: 100%;
-                box-shadow: 17px 0px 15px -2px #beb7ad;
-              `}
-              src={PalceholderImage}
-              />} 
+              <Img fluid={placeholder.asset.fluid} /> 
               <div>{artworkMediaName}</div> 
             </div>
           </Link>
@@ -45,8 +43,9 @@ export const Artwork = ({ artworkImage, artworkName, artworkSlug, artworkMedia, 
   };
   
   Artwork.defaultProps = {
-    artworkImage: PalceholderImage,
     artworkName: 'test',
+    artworkMediaName: 'test',
+    // artworkImage: 'placeholder',
     onHover: PropTypes.func,
   };
 

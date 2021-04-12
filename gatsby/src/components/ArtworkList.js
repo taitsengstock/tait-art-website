@@ -31,6 +31,7 @@ export default function ArtworkList({ artworks }) {
                 artworkMedia={artwork.medium}
                 artworkMediaName={artwork.medium.name}
                 artworkMediaSlug={artwork.medium.slug.current}
+                key={artwork.id}
                 />
             ))}
           </Carousel>
@@ -48,6 +49,7 @@ export default function ArtworkList({ artworks }) {
                   artworkMedia={artwork.medium}
                   artworkMediaName={artwork.medium.name}
                   artworkMediaSlug={artwork.medium.slug.current}
+                  key={artwork.id}
                   />
               ))}
             </div>

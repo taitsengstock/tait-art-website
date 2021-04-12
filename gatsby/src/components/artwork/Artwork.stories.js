@@ -4,6 +4,7 @@ import React from 'react';
 
 import { Artwork } from './Artwork';
 
+
 //👇 This default export determines where your story goes in the story list
 export default {
   title: 'Artwork',
@@ -17,4 +18,5 @@ export const Primary = Template.bind({});
 
 Primary.args = {
   /*👇 The args you need here will depend on your component */
+
 };
