@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import Artwork from './artwork/Artwork';
-import Carousel from './Carousel';
-import ListToolbar from './ListToolbar';
-import ListViewContext from './ListViewContext';
+import Artwork from '../artwork/Artwork';
+import Carousel from '../Carousel';
+import ListToolbar from '../ListToolbar';
+import ListViewContext from '../ListViewContext';
 
 const Gallery = styled.div`
   padding: 1rem;

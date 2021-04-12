@@ -9,6 +9,13 @@ import { Artwork } from './Artwork';
 export default {
   title: 'Artwork',
   component: Artwork,
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: '400px' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 //👇 We create a “template” of how args map to rendering
