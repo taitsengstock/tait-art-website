@@ -2,16 +2,17 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import Artwork from '../artwork/Artwork';
 import Carousel from '../Carousel';
-import ListToolbar from '../ListToolbar';
+import ListToolbar from '../ListToolbar/ListToolbar';
 import ListViewContext from '../ListViewContext';
 
 const Gallery = styled.div`
   padding: 1rem;
 `
-export default function ArtworkList({ artworks }) {
+export const ArtworkList = ({ artworks }) => {
 
   const [view, setView] = useContext(ListViewContext)
-  console.log(view)
+
+  // const ArtworkDate = {formatDate({artwork.date})}
 
   return (
     <div>
@@ -31,6 +32,7 @@ export default function ArtworkList({ artworks }) {
                 artworkMedia={artwork.medium}
                 artworkMediaName={artwork.medium.name}
                 artworkMediaSlug={artwork.medium.slug.current}
+                artworkDate={artwork.date}
                 key={artwork.id}
                 />
             ))}
@@ -60,3 +62,5 @@ export default function ArtworkList({ artworks }) {
     </div>
   );
 }
+
+export default ArtworkList;

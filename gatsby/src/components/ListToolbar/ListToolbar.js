@@ -1,13 +1,18 @@
 import React, { useContext } from 'react';
-import ListViewContext from './ListViewContext';
+import ListViewContext from '../ListViewContext';
+import SortContext from '../SortContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSquare,
   faTh,
 } from '@fortawesome/free-solid-svg-icons';
+import Select from '../Select/Select';
 
 export default function ListToolbar() {
+
+  const [sort, setSort] = useContext(SortContext)
   const [view, setView] = useContext(ListViewContext)
+
   return (
     <div css={css`
         display: grid;
@@ -33,6 +38,14 @@ export default function ListToolbar() {
           />
         </button>
       </div> 
+      <div css={css`
+          justify-self: end;
+      `}>
+        <Select onChange={(e) => setSort(e.target.value)}>
+          <option value="mrf">Most Recent first</option>
+          <option value="of">Oldest First</option>
+        </Select>
+      </div>
     </div>
   );
 }

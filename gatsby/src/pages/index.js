@@ -1,11 +1,11 @@
 import { graphql } from 'gatsby';
 import React, { useContext, useEffect, useState } from 'react';
-import ArtworkList from '../components/ArtworkList';
+import ArtworkList from '../components/artworklist/ArtworkList';
 import ArtworkListContext from '../components/ArtworkListContext';
 
 export default function HomePage({ data }) {
   
-  
+  console.log(data.artworks.nodes)
   const artworks = data.artworks.nodes; 
   // we got rid of this line
   // const [show, setShow] = useState(undefined)
@@ -58,6 +58,7 @@ export const query = graphql`
             current
           }
         }
+        date 
       }
     }
   }

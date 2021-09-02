@@ -40,6 +40,12 @@ export default {
         type: 'reference',
         to: { type: 'medium' }
       },
+      {
+        name: 'date',
+        title: 'Publish Date',
+        type: 'datetime',
+        validation: Rule => Rule.required()
+      },
     ],
   };
   

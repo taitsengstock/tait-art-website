@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Footer from './Footer.js';
 import Nav from './Nav.js';
 import 'normalize.css';
+import Reset from '../styles/Reset.js';
 import GlobalStyles from '../styles/GlobalStyles.js';
 import Typography from '../styles/Typography.js';
 
@@ -22,6 +23,7 @@ const Body = styled.div`
 export default function Layout({ children }) {
     return (
       <>
+        <Reset />
         <GlobalStyles />
         <Typography />
           <ContentStyles>
